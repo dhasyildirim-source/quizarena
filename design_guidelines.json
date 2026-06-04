@@ -1,0 +1,180 @@
+{
+  "theme": {
+    "name": "Performance Pro Navy & Gold",
+    "type": "dark",
+    "colors": {
+      "bg": "#0D1B3E",
+      "bgCard": "#132347",
+      "bgLight": "#1A2F5E",
+      "gold": "#F5C518",
+      "goldDark": "#C49A0E",
+      "blue": "#3B82F6",
+      "green": "#22C55E",
+      "red": "#EF4444",
+      "white": "#F0F4FF",
+      "muted": "#8896B3",
+      "border": "rgba(255,255,255,0.08)"
+    },
+    "fonts": {
+      "display": "Nunito-ExtraBold",
+      "body": "Nunito-Regular",
+      "bold": "Nunito-Bold",
+      "mono": "SpaceMono-Regular"
+    },
+    "spacing": {
+      "xs4": 4,
+      "sm8": 8,
+      "md16": 16,
+      "lg24": 24,
+      "xl32": 32,
+      "xxl48": 48
+    },
+    "radius": {
+      "sm8": 8,
+      "md12": 12,
+      "lg16": 16,
+      "xl24": 24,
+      "full999": 999
+    }
+  },
+  "typography": {
+    "h1": { "fontFamily": "display", "fontSize": 32, "lineHeight": 40, "color": "white", "letterSpacing": -0.5 },
+    "h2": { "fontFamily": "display", "fontSize": 24, "lineHeight": 32, "color": "white" },
+    "h3": { "fontFamily": "bold", "fontSize": 18, "lineHeight": 24, "color": "gold" },
+    "body": { "fontFamily": "body", "fontSize": 16, "lineHeight": 24, "color": "muted" },
+    "label": { "fontFamily": "bold", "fontSize": 12, "lineHeight": 16, "color": "muted", "textTransform": "uppercase", "letterSpacing": 1 },
+    "numberCount": { "fontFamily": "mono", "fontSize": 20, "color": "gold" }
+  },
+  "ui_patterns": {
+    "cards": {
+      "default": "backgroundColor: bgCard, borderRadius: md12, borderWidth: 1, borderColor: border, padding: md16",
+      "elevated": "backgroundColor: bgCard, borderRadius: md16, shadowColor: '#000', shadowOffset: {width: 0, height: 4}, shadowOpacity: 0.3, shadowRadius: 8, elevation: 5"
+    },
+    "buttons": {
+      "primary": "backgroundColor: gold, borderRadius: full999, paddingHorizontal: lg24, paddingVertical: md16, alignItems: 'center', justifyContent: 'center'",
+      "primaryText": "fontFamily: bold, color: bg, fontSize: 16",
+      "secondary": "backgroundColor: bgLight, borderRadius: full999, borderWidth: 1, borderColor: border, paddingHorizontal: lg24, paddingVertical: md16, alignItems: 'center'",
+      "secondaryText": "fontFamily: bold, color: white, fontSize: 16",
+      "danger": "backgroundColor: red",
+      "success": "backgroundColor: green"
+    },
+    "layout": {
+      "screenPadding": "md16",
+      "gap": "md16"
+    }
+  },
+  "screens": {
+    "HomeScreen": {
+      "layout": "SafeAreaView flex 1, ScrollView with vertical stacking and md16 padding.",
+      "components": [
+        { "name": "Header", "details": "Row layout. User Avatar (left), Rank Points & Gold Coin counters (right) wrapped in bgLight pills." },
+        { "name": "League Hero", "details": "Large animated trophy centered, 'Champion' H2 text, gold progress bar against bgLight background." },
+        { "name": "Daily Quests Strip", "details": "Horizontal ScrollView of 3 compact cards. Card: icon, text, progress bar (blue). Claim button when full." },
+        { "name": "Featured Mode Card", "details": "Massive elevated card, background image overlay. Play button (Primary Gold)." },
+        { "name": "Quick Stats Row", "details": "3 columns: Wins, Coins, Streak. Using SpaceMono for numbers, muted labels." }
+      ]
+    },
+    "GameModesScreen": {
+      "layout": "FlatList with numColumns=2, padding md16.",
+      "components": [
+        { "name": "Mode Cards", "details": "Aspect ratio 1:1, default card styling. Icon centered, Title bold white, Player count muted. Lock icon overlay if low level." }
+      ]
+    },
+    "GameScreen": {
+      "layout": "Full screen flex 1, backgroundColor bg. High tension design.",
+      "components": [
+        { "name": "VS Header", "details": "Flex row. Player Left (Avatar + Score), VS text center, Opponent Right (Avatar + Score)." },
+        { "name": "Timer", "details": "Large circular SVG timer in center. Starts gold, turns red at 5s. Pulse scale animation." },
+        { "name": "Question Card", "details": "Elevated card bgCard. Top badge: Category. Difficulty dots (1-3). Question text H2 center aligned." },
+        { "name": "Answer Buttons", "details": "List of 4 buttons (A/B/C/D). Default bgLight. On press: scale down, turn blue. Correct: turn green. Wrong: turn red. Add 'Opponent answered' small avatar indicator." }
+      ]
+    },
+    "ResultScreen": {
+      "layout": "Centered flex, dark overlay background.",
+      "components": [
+        { "name": "Winner Announcement", "details": "Massive text display. Confetti animation overlay." },
+        { "name": "Rewards Breakdown", "details": "XP count-up animation, Coin count-up animation. Uses mono font." },
+        { "name": "Rank Progress", "details": "League badge icon, progress bar showing + points filling up." },
+        { "name": "Action Buttons", "details": "Rematch (Primary Gold), Home (Secondary)." }
+      ]
+    },
+    "ProfileScreen": {
+      "layout": "Vertical ScrollView.",
+      "components": [
+        { "name": "Avatar Section", "details": "Large avatar, equipped abstract frame, title badge underneath. Level XP bar below." },
+        { "name": "Stats Grid", "details": "2x2 grid view. W/L Ratio, Accuracy %, Best Streak, Avg Response Time." },
+        { "name": "Recent Matches", "details": "FlatList view. W/L indicator, Opponent name, Score diff." }
+      ]
+    },
+    "ShopScreen": {
+      "layout": "Tabs top, grid scroll bottom.",
+      "components": [
+        { "name": "Tabs", "details": "Horizontal ScrollView: All, Frames, Avatars, Effects." },
+        { "name": "Item Card", "details": "bgCard, item image, price in Gold. 'Equip' button if owned." }
+      ]
+    },
+    "LeaderboardScreen": {
+      "layout": "Tabs + List.",
+      "components": [
+        { "name": "Tabs", "details": "Global, Country, Friends." },
+        { "name": "Rank Row", "details": "Rank # (Mono), Avatar, Name, League Badge, Points." }
+      ]
+    }
+  },
+  "animation_guidelines": {
+    "general": "Snappy, spring-based animations. Use React Native Reanimated.",
+    "buttons": "Scale down to 0.95 on press, scale up to 1 on release using spring physics.",
+    "count_ups": "Use a tween for numbers over 1.5 seconds. (Coins, XP).",
+    "feedback": "Horizontal shake animation on wrong answer. Pulse scale on correct answer.",
+    "level_up": "Screen flash white 0.2s, then show full screen badge pop with confetti."
+  },
+  "image_urls": [
+    {
+      "category": "avatars",
+      "url": "https://images.pexels.com/photos/7773546/pexels-photo-7773546.jpeg",
+      "description": "Neon gamer portrait"
+    },
+    {
+      "category": "avatars",
+      "url": "https://images.unsplash.com/photo-1648736958777-a7a9479d72d8",
+      "description": "Red jacket gamer portrait"
+    },
+    {
+      "category": "backgrounds",
+      "url": "https://images.unsplash.com/photo-1513346940221-6f673d962e97",
+      "description": "Gold lines dark texture for premium cards"
+    },
+    {
+      "category": "backgrounds",
+      "url": "https://images.pexels.com/photos/2248589/pexels-photo-2248589.jpeg",
+      "description": "Gold fabric for shop banners"
+    },
+    {
+      "category": "badges",
+      "url": "https://images.unsplash.com/photo-1578269174936-2709b6aeb913",
+      "description": "Gold Trophy for champion league"
+    },
+    {
+      "category": "badges",
+      "url": "https://images.pexels.com/photos/6532364/pexels-photo-6532364.jpeg",
+      "description": "Golden stars for achievements"
+    }
+  ],
+  "testing_attributes": {
+    "rule": "All interactive and key informational elements MUST include a testID attribute (React Native equivalent of data-testid).",
+    "examples": [
+      { "component": "Play Button", "id": "home-play-button" },
+      { "component": "Answer Option A", "id": "game-answer-a-button" },
+      { "component": "Coin Counter", "id": "header-coin-counter" }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: This is a React Native Expo app, NOT a web app. Therefore, use StyleSheet, View, Text, TouchableOpacity, and React Native Animated/Reanimated.",
+    "Do NOT use HTML tags (div, span) or standard Tailwind CSS web classes. Map the design system to React Native StyleSheet objects.",
+    "Apply the exact color hex codes and spacing values provided in this JSON.",
+    "Use 'react-native-svg' for the circular countdown timer and icons.",
+    "For the custom font 'Nunito' and 'SpaceMono', assume they are loaded via Expo Google Fonts.",
+    "Use react-native-reanimated or react-native-animatable for the juice (confetti, shake, spring scales).",
+    "Enforce `testID` (NOT data-testid) on React Native elements like TouchableOpacity and Text nodes holding critical data."
+  ]
+}
