@@ -10,7 +10,7 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.emergent.competitivetrivia.axi0ng"
+      "bundleIdentifier": "com.dvggames.quizarena"
     },
     "android": {
       "adaptiveIcon": {
@@ -18,7 +18,7 @@
         "backgroundColor": "#000"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.emergent.competitivetrivia.axi0ng"
+      "package": "com.dvggames.quizarena"
     },
     "web": {
       "bundler": "metro",
